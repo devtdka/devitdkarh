@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berita Bencana Alam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #c0392b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .news-item {
+      background: white;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-left: 5px solid #e74c3c;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .news-item h2 {
+      margin-top: 0;
+    }
+
+    .news-item p {
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Berita Bencana Alam</h1>
+    <p>Informasi terkini tentang gempa bumi, banjir, dan bencana alam lainnya.</p>
+  </header>
+
+  <main id="news-container">
+    <!-- Berita akan dimuat di sini -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 InfoBencana.id</p>
+  </footer>
+
+  <script>
+    const news = [
+      {
+        title: "Gempa 6.5 SR Guncang Wilayah Sumatera Barat",
+        date: "31 Juli 2025",
+        content: "Gempa berkekuatan 6.5 SR mengguncang wilayah Sumatera Barat pada pukul 10.45 WIB. Belum ada laporan korban jiwa."
+      },
+      {
+        title: "Banjir Bandang Terjang Kabupaten Garut",
+        date: "30 Juli 2025",
+        content: "Hujan lebat selama dua hari menyebabkan banjir bandang yang merusak puluhan rumah dan memutus akses jalan utama."
+      },
+      {
+        title: "Gunung Merapi Kembali Erupsi",
+        date: "28 Juli 2025",
+        content: "Gunung Merapi mengalami erupsi kecil dengan semburan abu mencapai 1.500 meter. Masyarakat diimbau untuk tetap waspada."
+      }
+    ];
+
+    const container = document.getElementById('news-container');
+
+    news.forEach(item => {
+      const newsItem = document.createElement('div');
+      newsItem.className = 'news-item';
+      newsItem.innerHTML = `
+        <h2>${item.title}</h2>
+        <small><em>${item.date}</em></small>
+        <p>${item.content}</p>
+      `;
+      container.appendChild(newsItem);
+    });
+  </script>
+</body>
+</html>
